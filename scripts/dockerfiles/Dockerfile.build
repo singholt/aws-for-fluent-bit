@@ -78,7 +78,7 @@ FROM builder as compile
 WORKDIR /tmp/fluent-bit-$FLB_VERSION/
 RUN git clone https://github.com/amazon-contributing/upstream-to-fluent-bit.git /tmp/fluent-bit-$FLB_VERSION/
 WORKDIR /tmp/fluent-bit-$FLB_VERSION/build/
-RUN git checkout $FLB_VERSION
+RUN git checkout ssl_shutdown
 
 # Apply Fluent Bit patches to base version
 COPY AWS_FLB_CHERRY_PICKS \
